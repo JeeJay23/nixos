@@ -27,6 +27,7 @@
     # pkgs.hello
     thunderbird
     git
+    gh
     # microsoft-edge
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -76,6 +77,11 @@
   #
   home.sessionVariables = {
     EDITOR = "vim";
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
 
   # Let Home Manager install and manage itself.
