@@ -22,12 +22,13 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+
     thunderbird
     git
     gh
+
+    # disabled packaged
+    # hyprnome
     # microsoft-edge
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -79,10 +80,10 @@
     EDITOR = "vim";
   };
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  # wayland.windowManager.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
