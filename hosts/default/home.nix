@@ -113,6 +113,7 @@
     font.package = pkgs.jetbrains-mono;
   };
 
+    # also set in conf.nix, settings here don't work yet
     programs.fish = {
         enable = true;
         shellAbbrs = {
@@ -132,6 +133,14 @@
             ms-vscode-remote.remote-ssh
             # GitHub.copilot
         ];
+        userSettings = {
+            "workbench.activityBar.location" = "top";
+            "workbench.colorTheme" = "Gruvbox Dark Medium";
+            "vim.easymotion" = true;
+            "vim.leader" = " ";
+            "editor.fontFamily" =  "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace";
+            "editor.fontLigatures" =  true;
+        };
     };
 
   # Let Home Manager install and manage itself.

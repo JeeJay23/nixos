@@ -114,26 +114,29 @@
     users = { "jader" = import ./home.nix; };
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+    # Install firefox.
+    programs.firefox.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim 
-    wget
-    spotify
-    waybar
-    networkmanagerapplet
-    dunst
-    libnotify
-    swww
-    rofi-wayland
-    gnome3.gnome-tweaks
-    mangohud
-    nnn
-    # microsoft-edge
-  ];
+    # List packages installed in system profile. To search, run:
+    # $ nix search wget
+    
+    # WARNING: currently rkgs is set to unstable, use pkgs-stable for 24.05 pkgs (configured in flake)
+    environment.systemPackages = with pkgs; [
+        vim 
+        wget
+        spotify
+        waybar
+        networkmanagerapplet
+        dunst
+        libnotify
+        swww
+        rofi-wayland
+        gnome3.gnome-tweaks
+        mangohud
+        nnn
+        whatsapp-for-linux
+        # microsoft-edge
+    ];
 
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
