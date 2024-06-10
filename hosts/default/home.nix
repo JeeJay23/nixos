@@ -115,6 +115,23 @@
 
     programs.fish = {
         enable = true;
+        shellAbbrs = {
+            g = "git";
+        };
+    };
+
+    programs.vscode = {
+        enable = true;
+        extensions = with pkgs.vscode-extensions; [
+            vscodevim.vim
+            ms-python.python
+            ms-python.vscode-pylance
+            ms-python.debugpy
+            ms-vscode.cpptools-extension-pack
+            jdinhlife.gruvbox
+            ms-vscode-remote.remote-ssh
+            # GitHub.copilot
+        ];
     };
 
   # Let Home Manager install and manage itself.
