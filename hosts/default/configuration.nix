@@ -140,6 +140,10 @@
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
+  # fix so's
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [];
+
   xdg.portal.enable = true;
   # xdg.portal.extraportals = [ pkgs.xdg-desktop-portal-gtk ];
   
