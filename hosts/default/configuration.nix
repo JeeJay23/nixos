@@ -58,6 +58,7 @@
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
 
+    # Cinnamon DE 
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.cinnamon.enable = true;
   services.cinnamon.apps.enable = true;
@@ -105,6 +106,7 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = pkgs.fish;
   };
 
   home-manager = {
@@ -115,13 +117,11 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    kitty
     spotify
     waybar
     networkmanagerapplet
@@ -143,6 +143,8 @@
   # fix so's
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
+
+    programs.fish.enable = true;
 
   xdg.portal.enable = true;
   # xdg.portal.extraportals = [ pkgs.xdg-desktop-portal-gtk ];

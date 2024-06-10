@@ -85,6 +85,7 @@
   #   xwayland.enable = true;
   # };
 
+  # programs and configs
   programs.git = {
     enable = true;
     userName = "Jader";
@@ -95,6 +96,26 @@
     };
   };
 
+  programs.kitty = {
+    enable = true;
+    environment = {
+        "EDITOR" = "vim";
+    };
+    settings = {
+        include = "current-theme.conf";
+        window_padding_width = 10;
+        draw_minimal_borders = "yes";
+        tab_bar_style = "separator";
+        focus_follows_mouse = "yes";
+    };
+    theme = "Gruvbox Dark Hard";
+    font.name = "JetBrains Mono";
+    font.package = pkgs.jetbrains-mono;
+  };
+
+    programs.fish = {
+        enable = true;
+    };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
