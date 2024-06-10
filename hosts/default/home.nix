@@ -101,6 +101,7 @@
     environment = {
         "EDITOR" = "vim";
     };
+
     settings = {
         include = "current-theme.conf";
         window_padding_width = 10;
@@ -131,6 +132,7 @@
             ms-vscode.cpptools-extension-pack
             jdinhlife.gruvbox
             ms-vscode-remote.remote-ssh
+            jnoortheen.nix-ide
             # GitHub.copilot
         ];
         userSettings = {
