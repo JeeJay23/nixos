@@ -26,6 +26,7 @@
     thunderbird
     git
     gh
+    heroic
 
     # disabled packaged
     # hyprnome
