@@ -24,7 +24,6 @@
   home.packages = with pkgs; [
 
     thunderbird
-    git
     gh
     heroic
 
@@ -85,6 +84,16 @@
   #   enable = true;
   #   xwayland.enable = true;
   # };
+
+  programs.git = {
+    enable = true;
+    userName = "Jader";
+    userEmail = "jvjader@gmail.com";
+    aliases = {
+      pu = "push";
+      lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+    };
+  };
 
 
   # Let Home Manager install and manage itself.
