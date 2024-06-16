@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { 
     config, 
     pkgs, 
@@ -120,7 +116,7 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     
-    # WARNING: currently rkgs is set to unstable, use pkgs-stable for 24.05 pkgs (configured in flake)
+    # WARNING: currently pkgs is set to unstable, use pkgs-stable for 24.05 pkgs (configured in flake)
     environment.systemPackages = with pkgs; [
         vim 
         wget
@@ -131,11 +127,11 @@
         libnotify
         swww
         rofi-wayland
-        gnome3.gnome-tweaks
         mangohud
         nnn
-        whatsapp-for-linux
-        # microsoft-edge
+        darktable
+        fzf
+        zellij
     ];
 
   programs.steam.enable = true;

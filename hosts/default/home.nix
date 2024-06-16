@@ -105,7 +105,9 @@
     settings = {
         include = "current-theme.conf";
         window_padding_width = 10;
-        draw_minimal_borders = "yes";
+        window_border_width = "0.5pt";
+        window_margin_width = "1";
+        draw_minimal_borders = "no";
         tab_bar_style = "separator";
         focus_follows_mouse = "yes";
     };
@@ -114,7 +116,6 @@
     font.package = pkgs.jetbrains-mono;
   };
 
-    # also set in conf.nix, settings here don't work yet
     programs.fish = {
         enable = true;
         shellAbbrs = {
@@ -142,6 +143,7 @@
             "vim.leader" = " ";
             "editor.fontFamily" =  "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace";
             "editor.fontLigatures" =  true;
+            "window.menuBarVisibility" = "toggle";
         };
     };
 
