@@ -26,6 +26,7 @@
         ./hosts/default/configuration.nix
         ./modules/nvidia.nix
         ./modules/cinnamon-de.nix
+        ./modules/plasma-de.nix
       ];
 
     };

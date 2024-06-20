@@ -14,7 +14,8 @@
     ];
 
   nvidia.enable = true;
-  cinnamon.enable = true;
+  cinnamon.enable = false;
+  kdeplasma.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
