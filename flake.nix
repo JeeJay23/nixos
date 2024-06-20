@@ -21,9 +21,13 @@
             config.allowUnfree = true;
         };
       };
+      
       modules = [
         ./hosts/default/configuration.nix
+        ./modules/nvidia.nix
+        ./modules/cinnamon-de.nix
       ];
+
     };
   };
 }
