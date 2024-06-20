@@ -9,7 +9,7 @@
 
 {
   options = {
-    cinnamon.enable = lib.mkEnableOption "enable Cinnamon"
+    cinnamon.enable = lib.mkEnableOption "enable Cinnamon";
   };
 
   config = lib.mkIf config.cinnamon.enable {
